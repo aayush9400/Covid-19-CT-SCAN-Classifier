@@ -1,5 +1,5 @@
 # Covid-19-Classifier
-This is a project with a working website integrated with a CNN model to make predictions whether a patient is covid-19 positive or not
+This is a project with a working website integrated with a CNN model to make predictions whether a patient is covid-19 positive or not. (http://65.1.110.30/)
 # Training of model
 Different models were trained like VGG16, Autoencoder classifier and InceptionV3. In the end InceptionV3 produced the best results.
 # Evalutation and results
