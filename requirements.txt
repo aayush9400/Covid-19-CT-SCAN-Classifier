@@ -1,0 +1,9 @@
+blinker==1.6.2
+cachetools==4.2.4
+certifi==2019.11.28
+Flask==2.3.2
+numpy==1.23.5
+opencv-python==3.4.15.55
+protobuf==3.20.0
+tensorflow==2.2.0
+Werkzeug==2.3.4

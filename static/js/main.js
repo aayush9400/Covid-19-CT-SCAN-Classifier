@@ -51,4 +51,31 @@ $(document).ready(function () {
         });
     });
 
+        // Predict
+        $('#btn-predict-pro').click(function () {
+            var form_data = new FormData($('#upload-file')[0]);
+    
+            // Show loading animation
+            $(this).hide();
+            $('.loader').show();
+    
+            // Make prediction by calling api /predict
+            $.ajax({
+                type: 'POST',
+                url: '/predictpro',
+                data: form_data,
+                contentType: false,
+                cache: false,
+                processData: false,
+                async: true,
+                success: function (data) {
+                    // Get and display the result
+                    $('.loader').hide();
+                    $('#result').fadeIn(600);
+                    $('#result').text(' Result:  ' + data);
+                    console.log('Success!');
+                },
+            });
+        });
+
 });
