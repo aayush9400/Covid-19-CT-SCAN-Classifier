@@ -20,22 +20,6 @@
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Help</button>
         </div>
     </nav>
-    <div class="container">
-        <div id="content" style="margin-top:2em">
-            <h2>Research Papers</h2>
-            <ul>
-                <li><a href="https://doi.org/10.1080/07391102.2020.1788642">Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning</a></li>
-                <p>A DenseNet201 based deep transfer learning (DTL) is proposed to classify the patients as COVID infected or not i.e. COVID-19 (+) or COVID (-). The proposed model is utilized to extract features by using its own learned weights on the ImageNet dataset along with a convolutional neural structure.</p>
-                <img src="{{ url_for('static', filename='images/architecture.jpg') }}" alt="Proposed Architecture">
-                <li><a href="https://doi.org/10.1007/s12652-020-02669-6">Rapid COVID-19 diagnosis using ensemble deep transfer learning models from chest radiographic images</a></li>
-                <p>Two different ensemble deep transfer learning models have been designed for COVID-19 diagnosis utilizing the chest X-rays. Both models have utilized pre-trained models for better performance. They are able to differentiate COVID-19, viral pneumonia, and bacterial pneumonia. Both models have been developed to improve the generalization capability of the classifier for binary and multi-class problems.</p>
-                <img src="{{ url_for('static', filename='images/architecture_ensemble.jpg') }}" alt="Proposed Architecture">
-            </ul>
-        </div>
-    </div>
-    <footer>
-        <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
-    </footer>
 
     <h2>Covid-19 Image Classifier</h2>
 
@@ -64,6 +48,24 @@
         </h3>
 
     </div>
+
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            <h2>Research Papers</h2>
+            <ul>
+                <li><a href="https://doi.org/10.1080/07391102.2020.1788642">Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning</a></li>
+                <p>A DenseNet201 based deep transfer learning (DTL) is proposed to classify the patients as COVID infected or not i.e. COVID-19 (+) or COVID (-). The proposed model is utilized to extract features by using its own learned weights on the ImageNet dataset along with a convolutional neural structure.</p>
+                <img src="{{ url_for('static', filename='images/architecture.jpg') }}" alt="Proposed Architecture">
+                <li><a href="https://doi.org/10.1007/s12652-020-02669-6">Rapid COVID-19 diagnosis using ensemble deep transfer learning models from chest radiographic images</a></li>
+                <p>Two different ensemble deep transfer learning models have been designed for COVID-19 diagnosis utilizing the chest X-rays. Both models have utilized pre-trained models for better performance. They are able to differentiate COVID-19, viral pneumonia, and bacterial pneumonia. Both models have been developed to improve the generalization capability of the classifier for binary and multi-class problems.</p>
+                <img src="{{ url_for('static', filename='images/architecture_ensemble.jpg') }}" alt="Proposed Architecture">
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+    </footer>
 </body>
 
 </html>
