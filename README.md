@@ -33,7 +33,7 @@ The [code folder](/notebook) contains the code for training and evaluating the m
 - `covid-19 analysis using transfer learning.ipynb`: Preprocesses the dataset, prepares it for training and evaluates the models.
 
 ## Results
-The trained model achieved an accuracy of 95% on the test set. The confusion matrix is shown below:
+The trained model achieved an accuracy of 96.15% on the test set. The confusion matrix is shown below:
 |           | COVID-19 | Normal |
 |-----------|----------|--------|
 | COVID-19  | 0.96     | 0.04   |
