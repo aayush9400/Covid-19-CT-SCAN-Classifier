@@ -16,17 +16,11 @@ This is a project with a working website integrated with a CNN model to make pre
 ## Dataset
 The datasets used for this project are:
 - [COVID-19 CT-SCAN Database](http://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset). This dataset contains CT-scan images of COVID-19 cases, and normal cases.
-- [COVID-19 X-RAY Database](https://www.kaggle.com/darshan1504/covid19-detection-xraydataset). This dataset contains X-ray images of COVID-19 cases, and normal cases.
-- [COVID-19 3 Class X-RAY Database](https://www.kaggle.com/amanullahasraf/covid19-pneumonia-normal-chest-xraypa-dataset). This dataset contains X-ray images of COVID-19 cases, normal cases, and other pneumonia cases.
 
 ## Architecture
 Architecture of Binary Classifier  
 
 ![architecture](static/images/architecture.jpg)
-
-Architecture of Multi-Class Classifier 
-
-![architecture_ensemble](static/images/architecture_ensemble.jpg)
 
 ## Code
 The [code folder](/notebook) contains the code for training and evaluating the model. There is one notebook:
@@ -48,4 +42,6 @@ The DenseNet201 model with modified head converged to classifiy the prositive an
 If you use this code or dataset in your research, please cite our paper:
 
 * [Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning](https://doi.org/10.1080/07391102.2020.1788642)
+
+### Relevant Papers
 * [Rapid COVID‑19 diagnosis using ensemble deep transfer learning models from chest radiographic images](https://doi.org/10.1007/s12652-020-02669-6)
