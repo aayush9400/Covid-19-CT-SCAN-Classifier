@@ -19,6 +19,13 @@ The datasets used for this project are:
 - [COVID-19 X-RAY Database](https://www.kaggle.com/darshan1504/covid19-detection-xraydataset). This dataset contains X-ray images of COVID-19 cases, and normal cases.
 - [COVID-19 3 Class X-RAY Database](https://www.kaggle.com/amanullahasraf/covid19-pneumonia-normal-chest-xraypa-dataset). This dataset contains X-ray images of COVID-19 cases, normal cases, and other pneumonia cases.
 
+## Dataset
+Architecture of Binary Classifier
+![architecture](https://github.com/aayush9400/Covid-19-CT-SCAN-Classifier/static/images/architecture.jpg)
+
+Architecture of Multi-Class Classifier
+![architecture_ensemble](https://github.com/aayush9400/Covid-19-CT-SCAN-Classifier/static/images/architecture_ensemble.jpg)
+
 ## Code
 The [code folder](/notebook) contains the code for training and evaluating the model. There is one notebook:
 - `covid-19 analysis using transfer learning.ipynb`: Preprocesses the dataset, prepares it for training and evaluates the models.
