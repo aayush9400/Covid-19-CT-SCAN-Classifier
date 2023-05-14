@@ -38,5 +38,5 @@ The DenseNet201 model with modified head converged to classifiy the prositive an
 ## Citation
 If you use this code or dataset in your research, please cite our paper:
 
-[Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning](https://doi.org/10.1080/07391102.2020.1788642)
-[Rapid COVID‑19 diagnosis using ensemble deep transfer learning models from chest radiographic images](https://doi.org/10.1007/s12652-020-02669-6)
+* [Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning](https://doi.org/10.1080/07391102.2020.1788642)
+* [Rapid COVID‑19 diagnosis using ensemble deep transfer learning models from chest radiographic images](https://doi.org/10.1007/s12652-020-02669-6)
