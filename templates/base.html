@@ -22,18 +22,15 @@
     </nav>
     <div class="container">
         <div id="content" style="margin-top:2em">
-            <h1>Research Papers</h1>
+            <h2>Research Papers</h2>
             <ul>
-                <li><a href="https://doi.org/10.1080/07391102.2020.1788642/">Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning</a></li>
-                <p>Our research project aims to develop a Covid-19 image classification model using deep learning techniques. We collected a large dataset of chest X-ray and CT scan images from Covid-19 patients and healthy individuals. We then used convolutional neural networks (CNNs) to train and test our model. Our results showed that our model achieved an accuracy of over 95% in classifying Covid-19 images from healthy images.</p>
-                <img src="{{ url_for('static', filename='architecture.jpg') }}" alt="Proposed Architecture">
-                <li><a href="https://doi.org/10.1007/s12652-020-02669-6/">Rapid COVID-19 diagnosis using ensemble deep transfer learning models from chest radiographic images</a></li>
-                <p>Our research project aims to develop a Covid-19 image classification model using deep learning techniques. We collected a large dataset of chest X-ray and CT scan images from Covid-19 patients and healthy individuals. We then used convolutional neural networks (CNNs) to train and test our model. Our results showed that our model achieved an accuracy of over 95% in classifying Covid-19 images from healthy images.</p>
-                <img src="{{ url_for('static', filename='architecture_ensemble.jpg') }}" alt="Proposed Architecture">
+                <li><a href="https://doi.org/10.1080/07391102.2020.1788642">Classification of the COVID-19 infected patients using DenseNet201 based deep transfer learning</a></li>
+                <p>A DenseNet201 based deep transfer learning (DTL) is proposed to classify the patients as COVID infected or not i.e. COVID-19 (+) or COVID (-). The proposed model is utilized to extract features by using its own learned weights on the ImageNet dataset along with a convolutional neural structure.</p>
+                <img src="architecture.jpg" alt="Proposed Architecture">
+                <li><a href="https://doi.org/10.1007/s12652-020-02669-6">Rapid COVID-19 diagnosis using ensemble deep transfer learning models from chest radiographic images</a></li>
+                <p>Two different ensemble deep transfer learning models have been designed for COVID-19 diagnosis utilizing the chest X-rays. Both models have utilized pre-trained models for better performance. They are able to differentiate COVID-19, viral pneumonia, and bacterial pneumonia. Both models have been developed to improve the generalization capability of the classifier for binary and multi-class problems.</p>
+                <img src="architecture_ensemble.jpg" alt="Proposed Architecture">
             </ul>
-            <h1>Results</h1>
-            <p>Our Covid-19 image classification model can accurately detect Covid-19 cases from chest X-ray and CT scan images with an accuracy of over 95%. This is a significant improvement over traditional diagnostic methods, which are often time-consuming and require specialized equipment.</p>
-            <p>We have integrated our model into a web application, which allows users to upload chest X-ray and CT scan images for classification. The application also provides users with information about Covid-19 and its symptoms, as well as links to relevant resources.</p>
         </div>
     </div>
     <footer>
