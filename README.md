@@ -25,11 +25,10 @@ The [code folder](/notebook) contains the code for training and evaluating the m
 
 ## Results
 The trained model achieved an accuracy of 95% on the test set. The confusion matrix is shown below:
-|           | COVID-19 | Normal | Other Pneumonia |
-|-----------|----------|--------|-----------------|
-| COVID-19  | 129      | 1      | 5               |
-| Normal    | 3        | 154    | 3               |
-| Pneumonia | 2        | 3      | 150             |
+|           | COVID-19 | Normal |
+|-----------|----------|--------|
+| COVID-19  | 0.96     | 0.04   |
+| Normal    | 0.04     | 0.96   |
 
 ## Conclusion
 The results of this research project show that deep learning techniques can be effective in classifying COVID-19 cases from normal cases and other pneumonia cases using X-ray images. 
