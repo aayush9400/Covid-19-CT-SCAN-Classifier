@@ -20,11 +20,11 @@ The datasets used for this project are:
 - [COVID-19 3 Class X-RAY Database](https://www.kaggle.com/amanullahasraf/covid19-pneumonia-normal-chest-xraypa-dataset). This dataset contains X-ray images of COVID-19 cases, normal cases, and other pneumonia cases.
 
 ## Architecture
-Architecture of Binary Classifier
-- ![architecture](static/images/architecture.jpg)
+Architecture of Binary Classifier  
+![architecture](static/images/architecture.jpg)
 
-Architecture of Multi-Class Classifier
-- ![architecture_ensemble](static/images/architecture_ensemble.jpg)
+Architecture of Multi-Class Classifier  
+![architecture_ensemble](static/images/architecture_ensemble.jpg)
 
 ## Code
 The [code folder](/notebook) contains the code for training and evaluating the model. There is one notebook:
