@@ -21,9 +21,11 @@ The datasets used for this project are:
 
 ## Architecture
 Architecture of Binary Classifier  
+
 ![architecture](static/images/architecture.jpg)
 
-Architecture of Multi-Class Classifier  
+Architecture of Multi-Class Classifier 
+
 ![architecture_ensemble](static/images/architecture_ensemble.jpg)
 
 ## Code
