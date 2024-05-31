@@ -8,3 +8,4 @@ protobuf==3.20.0
 tensorflow==2.2.0
 Werkzeug==2.3.4
 python-dotenv==1.0.1
+scholarly==1.6.0
