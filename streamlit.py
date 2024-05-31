@@ -15,7 +15,7 @@ st.set_page_config(page_title="Covid-19 Predictor", layout="centered")
 # Load your trained model
 MODEL_PATH = os.getenv("MODEL_PATH")
 model = load_model(MODEL_PATH)
-model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
+# model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # Function to predict using the model
 def model_predict(img, model):
