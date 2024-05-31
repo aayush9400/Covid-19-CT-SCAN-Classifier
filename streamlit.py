@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 import os
-from PIL import Image
+import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
 import time
@@ -34,19 +34,19 @@ if model is None:
 # Function to predict using the model
 def model_predict(img, model):
     try:
-        img = img.convert("RGB")
-        img = img.resize((224, 224))
+        # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        img = cv2.resize(img, (224, 224))
         img = np.asarray(img, dtype=np.float32) / 255
-        img = img[:, :, :3]
         img = np.reshape(img, [1, 224, 224, 3])
         pred = model.predict(img)
         i1 = pred.argmax(axis=-1)
         if i1 == 0:
-            preds = "Covid Result: +VE"
+            preds = "Test Result: Covid Positive"
         else:
-            preds = "Covid Result: -VE"
+            preds = "Test Result: Covid Negative"
         return preds
     except Exception as e:
+        st.error(f"Prediction error: {e}")
         return f"Prediction error: {e}"
 
 st.title("Covid-19 Predictor")
@@ -58,14 +58,15 @@ uploaded_file = st.sidebar.file_uploader("Choose a CT-Scan image...", type=["png
 if uploaded_file is not None:
     try:
         if "image" not in st.session_state:
-            st.session_state.image = Image.open(uploaded_file)
+            file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+            st.session_state.image = cv2.imdecode(file_bytes, 1)
             progress_bar = st.progress(0)
             for percent_complete in range(100):
-                time.sleep(0.01)
                 progress_bar.progress(percent_complete + 1)
             progress_bar.empty()
 
-        st.image(st.session_state.image, caption="Uploaded Image", use_column_width=False)
+        # Display the image using Streamlit's built-in methods
+        st.image(cv2.cvtColor(st.session_state.image, cv2.COLOR_BGR2RGB), caption="Uploaded Image", use_column_width=False)
 
         if st.button("Predict"):
             with st.spinner('Predicting...'):
