@@ -56,21 +56,23 @@ st.sidebar.title("Settings")
 uploaded_file = st.sidebar.file_uploader("Choose a CT-Scan image...", type=["png", "jpg", "jpeg"])
 
 if uploaded_file is not None:
-    if "image" not in st.session_state:
-        st.session_state.image = Image.open(uploaded_file)
-    
-    progress_bar = st.progress(0)
-    for percent_complete in range(100):
-        time.sleep(0.05)
-        progress_bar.progress(percent_complete + 1)
-    
-    progress_bar.empty()
-    st.image(st.session_state.image, caption="Uploaded Image", use_column_width=False)
+    try:
+        if "image" not in st.session_state:
+            st.session_state.image = Image.open(uploaded_file)
+            progress_bar = st.progress(0)
+            for percent_complete in range(100):
+                time.sleep(0.05)
+                progress_bar.progress(percent_complete + 1)
+            progress_bar.empty()
 
-    if st.button("Predict"):
-        with st.spinner('Predicting...'):
-            result = model_predict(st.session_state.image, model)
-        st.success(result)
+        st.image(st.session_state.image, caption="Uploaded Image", use_column_width=False)
+
+        if st.button("Predict"):
+            with st.spinner('Predicting...'):
+                result = model_predict(st.session_state.image, model)
+            st.success(result)
+    except Exception as e:
+        st.error(f"Error processing image: {e}")
 else:
     st.info("Please upload an image to get started.")
 
