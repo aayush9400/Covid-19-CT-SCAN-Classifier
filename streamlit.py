@@ -61,7 +61,7 @@ if uploaded_file is not None:
             st.session_state.image = Image.open(uploaded_file)
             progress_bar = st.progress(0)
             for percent_complete in range(100):
-                time.sleep(0.05)
+                time.sleep(0.01)
                 progress_bar.progress(percent_complete + 1)
             progress_bar.empty()
 
