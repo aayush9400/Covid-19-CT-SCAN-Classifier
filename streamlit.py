@@ -34,16 +34,16 @@ if model is None:
 # Function to predict using the model
 def model_predict(img, model):
     try:
-        # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
         img = cv2.resize(img, (224, 224))
         img = np.asarray(img, dtype=np.float32) / 255
         img = np.reshape(img, [1, 224, 224, 3])
         pred = model.predict(img)
         i1 = pred.argmax(axis=-1)
         if i1 == 0:
-            preds = "Test Result: Covid Positive"
+            preds = "test result: covid +ve"
         else:
-            preds = "Test Result: Covid Negative"
+            preds = "test result: covid -ve"
         return preds
     except Exception as e:
         st.error(f"Prediction error: {e}")
