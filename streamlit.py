@@ -125,13 +125,13 @@ custom_css = """
         width: 500px;
         height: auto;
     }
-    .footer-text {
+    .sidebar-footer {
         position: fixed;
         bottom: 0;
         width: 100%;
         color: gray;
-        text-align: center;
-        padding: 10px;
+        text-align: left;
+        padding: 1px;
     }
 </style>
 """
@@ -141,8 +141,8 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(html_content, unsafe_allow_html=True)
 
 # Custom Footer
-st.markdown("""
-    <div class="footer-text">
+st.sidebar.markdown("""
+    <div class="sidebar-footer">
         <p>Developed by Aayush Jaiswal</p>
     </div>
     """, unsafe_allow_html=True)
